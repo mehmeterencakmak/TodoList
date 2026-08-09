@@ -193,3 +193,136 @@
 // Console.WriteLine(
 //     $"First is: {a}, second is: {b}, third is:{c}"
 // );
+
+// //while
+
+// var number = 0;
+
+// while (number < 10) {
+//     number++;
+//     Console.WriteLine(number);
+// }
+
+// // do while
+// int number = 1;
+
+// do
+// {
+//     Console.WriteLine(number);
+//     number++;
+// }
+// while (number <= 5);
+
+// //for 
+
+// for (int i = 0; i <5 ; i++)
+// {
+//     Console.WriteLine("Hello");
+// }
+
+
+// // arrays
+
+// // int[] numbers = new int [5];
+
+// // numbers[0] = 5;
+// // numbers[1] = 6;
+// // numbers[2] = 7;
+// // numbers[3] = 37;
+// // numbers[4] = 47;
+
+// // Console.WriteLine("Element at index 0 is " + numbers[0]);
+// // Console.WriteLine("Element at index 1 is " + numbers[1]);
+// // Console.WriteLine("Element at index 2 is " + numbers[2]);
+
+
+// // var firstFromEnd = numbers[^1];
+// // var secondFromEnd = numbers[^2];
+// // Console.WriteLine("First from end : " + firstFromEnd);
+// // Console.WriteLine("Second from end: " + secondFromEnd);
+
+
+// // Console.WriteLine("Element at index 0 is " + numbers[0]);
+// // Console.WriteLine("Element at index 1 is " + numbers[1]);
+// // Console.WriteLine("Element at index 2 is " + numbers[2]);
+
+
+// int[] numbers = new int[] {2, 6, 1, 6, 19};
+
+// var sum = 0;
+
+
+// for(int i = 0; i < numbers.Length; i++)
+// {
+//     sum += numbers[i];
+// }
+// Console.WriteLine("sum of elments is " + sum);
+
+
+// // multidimensional array 
+
+// char[,] letters = new char[2,3];
+
+// letters[0, 0] = 'A';
+// letters[0, 1] = 'B';
+// letters[0, 2] = 'C';
+// letters[0, 0] = 'D';
+// letters[0, 1] = 'E';
+// letters[0, 2] = 'F';
+
+// var letters2 = new char[,]
+// {
+//     {'A', 'B','C'},
+//     {'D','E','F'},
+// };
+
+// // foreach
+
+// var words = new[] {"one","two","three","four"};
+
+// foreach(var word in words)
+// {
+//     Console.WriteLine(word);
+// }
+
+
+// lists 
+// List<string> words = new List<string>();
+// Console.WriteLine("Count of elements is "+ words.Count);
+
+// words.Add("hello");
+// Console.WriteLine("Count of element is " + words.Count);
+
+
+
+// var words = new List<string>
+// {
+//     "one",
+//     "two",
+    
+// };
+// Console.WriteLine("Count of element is " + words.Count);
+
+// foreach(var word in words)
+// {
+//     Console.WriteLine(word);
+// }
+
+// words[0] = "ouno";
+
+// // for(int i = 0; i < words.Count; i++)
+// // {
+// //     Console.WriteLine(words[i]);
+// // }
+
+// // var moreWords = new[] { "three", "four", "five" };
+// // words.AddRange(moreWords);
+
+// words.AddRange(new[] { "three", "four", "five" });
+
+// for(int i = 0; i < words.Count; i++)
+// {
+//     Console.WriteLine(words[i]);
+// }
+
+

@@ -480,94 +480,94 @@
 
 // Console.WriteLine(pizza.Describe());
 
-var ingredient = new Ingredient(1);
-var cheddar = new Cheddar(2, 12);
-Console.WriteLine(cheddar);
+// var ingredient = new Ingredient(1);
+// var cheddar = new Cheddar(2, 12);
+// Console.WriteLine(cheddar);
 
-Console.ReadKey();
+// Console.ReadKey();
 
-public class Pizza
-{
-    private List<Ingredient> _ingredients = new List<Ingredient>();
+// public class Pizza
+// {
+//     private List<Ingredient> _ingredients = new List<Ingredient>();
 
-    public void AddIngredient(Ingredient ingredient) => 
-    _ingredients.Add(ingredient);
+//     public void AddIngredient(Ingredient ingredient) => 
+//     _ingredients.Add(ingredient);
 
-    public override string ToString() => 
-        $"This is a pizza with {string.Join(", ", _ingredients)}";
-}
-public class Ingredient
-{
+//     public override string ToString() => 
+//         $"This is a pizza with {string.Join(", ", _ingredients)}";
+// }
+// public class Ingredient
+// {
 
-    public Ingredient(int priceIfExtraTopping){
-        Console.WriteLine("Constructor fro the Ingredient class");
-        PriceIfExtraTopping = priceIfExtraTopping;
-    }
-    public int PriceIfExtraTopping {get; }
+//     public Ingredient(int priceIfExtraTopping){
+//         Console.WriteLine("Constructor fro the Ingredient class");
+//         PriceIfExtraTopping = priceIfExtraTopping;
+//     }
+//     public int PriceIfExtraTopping {get; }
 
-    public override string ToString() => Name;
-    public virtual string Name {get; } = "Some ingredient";
-    public int PublicField;
-    public string PublicMethod() => 
-        "This method is PUBLIC in the Ingredient class.";
-    protected string ProtectedMethod() => 
-        "This method is PROTECTED in the Ingredient class.";
-    private string PrivateMethod() => 
-        "This method is PRIVATE in the Ingredient class.";
+//     public override string ToString() => Name;
+//     public virtual string Name {get; } = "Some ingredient";
+//     public int PublicField;
+//     public string PublicMethod() => 
+//         "This method is PUBLIC in the Ingredient class.";
+//     protected string ProtectedMethod() => 
+//         "This method is PROTECTED in the Ingredient class.";
+//     private string PrivateMethod() => 
+//         "This method is PRIVATE in the Ingredient class.";
     
-}
+// }
 
-public class Cheese : Ingredient
-{
-    public Cheese(int priceIfExtraTopping) : base(priceIfExtraTopping)
-    {
+// public class Cheese : Ingredient
+// {
+//     public Cheese(int priceIfExtraTopping) : base(priceIfExtraTopping)
+//     {
         
-    }
-}
+//     }
+// }
 
-public class ItalianFoodItem
-{
+// public class ItalianFoodItem
+// {
     
-}
+// }
 
-public class Cheddar : Ingredient
-{
+// public class Cheddar : Ingredient
+// {
 
-    public Cheddar(int priceIfExtraTopping, int agedForMonths) : base(priceIfExtraTopping)
-    {
-        AgedForMonths = agedForMonths;
-        Console.WriteLine("Constructor from the Cheddar class");
-    }
+//     public Cheddar(int priceIfExtraTopping, int agedForMonths) : base(priceIfExtraTopping)
+//     {
+//         AgedForMonths = agedForMonths;
+//         Console.WriteLine("Constructor from the Cheddar class");
+//     }
 
-    public override string Name  => 
-    $"{base.Name}, more specifically, " +
-    $"a Cheddar cheese aged for {AgedForMonths} months";
-    public int AgedForMonths {get;}
-    public void UseMethodsFromBaseClass()
-    {
-        Console.WriteLine(PublicMethod());
-        Console.WriteLine(ProtectedMethod());
-        // Console.WriteLine(PrivateMethod());
-    }
-}
-public class TomataSauce : Cheese
-{
-    public TomataSauce(int priceIfExtraTopping) : base(priceIfExtraTopping)
-    {
+//     public override string Name  => 
+//     $"{base.Name}, more specifically, " +
+//     $"a Cheddar cheese aged for {AgedForMonths} months";
+//     public int AgedForMonths {get;}
+//     public void UseMethodsFromBaseClass()
+//     {
+//         Console.WriteLine(PublicMethod());
+//         Console.WriteLine(ProtectedMethod());
+//         // Console.WriteLine(PrivateMethod());
+//     }
+// }
+// public class TomataSauce : Cheese
+// {
+//     public TomataSauce(int priceIfExtraTopping) : base(priceIfExtraTopping)
+//     {
         
-    }
-    public  string Name  => "Tomato sauce";
-    public int TomatosIn100Grams {get;}
-}
-public class Mozzarella : Ingredient
-{
-    public Mozzarella(int priceIfExtraTopping) : base(priceIfExtraTopping)
-    {
+//     }
+//     public  string Name  => "Tomato sauce";
+//     public int TomatosIn100Grams {get;}
+// }
+// public class Mozzarella : Ingredient
+// {
+//     public Mozzarella(int priceIfExtraTopping) : base(priceIfExtraTopping)
+//     {
         
-    }
-    public override string Name  => "Mozzarella";
-    public bool IsLight {get;}
-}
+//     }
+//     public override string Name  => "Mozzarella";
+//     public bool IsLight {get;}
+// }
 
 
 
@@ -615,3 +615,5 @@ public class Mozzarella : Ingredient
 //         return number > 0;
 //     }
 // }
+
+

@@ -1,7 +1,12 @@
+using System;
+using System.Collections.Generic;
+using CookieCookbook.Recipes;
+
 var cookiesRecipresApp = new CookiesRecipesApp(
     new RecipesRepository(),
     new RecipresConsoleUserInteraction());
-cookieRecipresApp.Run();
+
+cookiesRecipresApp.Run("recipes.txt");
 
 public class CookiesRecipesApp
 {
@@ -17,7 +22,7 @@ public class CookiesRecipesApp
     }
 
 
-    public void Run()
+    public void Run(string filePath)
     {
         var allRecipes = _recipesRepository.Read(filePath);
         _recipesConsoleUserInteraction.PrintExistingRecipes(allRecipes);
@@ -25,7 +30,7 @@ public class CookiesRecipesApp
         _recipesConsoleUserInteraction.PromtToCreateRecipe();
 
         var ingredients = _recipesConsoleUserInteraction.ReadIngredientsFromUser();
-        if(ingredienets.Count > 0)
+        if(ingredients.Count > 0)
         {
             var recipes = new Recipe(ingredients);
             allRecipes.Add(recipe);
@@ -51,6 +56,7 @@ public interface IRecipesUserInteraction
 {
     void ShowMessage(string message);
     void Exit();
+    void PrintExistingRecipes(IEnumerable<Recipe> allRecipes);
 }
 
 public class RecipresConsoleUserInteraction : IRecipesUserInteraction
@@ -64,13 +70,37 @@ public class RecipresConsoleUserInteraction : IRecipesUserInteraction
         Console.WriteLine("Press any key to close.");
         Console.ReadKey();
     }
+    public void PrintExistingRecipes(IEnumerable<Recipe> allRecipes)
+    {
+       if(allRecipes.Count() > 0)
+        {
+            
+        }
+    }
 }
 
 public interface IRecipesRepository
 {
-    
+    List<Recipe> Read(string filePath);
 }
 public class RecipesRepository : IRecipesRepository
 {
-    
+    public List<Recipe> Read(string filePath)
+    {
+        return new List<Recipe>
+        {
+            new Recipe(new List<Ingredient>
+            {
+                new WheatFlour(),
+                new Butter(),
+                new Sugar()
+            }),
+            new Recipe(new List<Ingredient>
+            {
+                new CocoaPowder(),
+                new SpeltFlour(),
+                new Cinnamon()
+            })
+        };
+    }
 }

@@ -28,22 +28,94 @@
 // {
 //     return int.Parse(input);
 // }
-try
-{
-    var result = GetFirstElement(new int[0]);
-}
-catch
-{
-    
-}
+
+
+// try
+// {
+//     var result = GetFirstElement(new int[0]);
+// }
+// catch
+// {
+
+// }
+
+// Console.ReadKey();
+
+// int  GetFirstElement(IEnumerable<int> numbers)
+// {
+//     foreach(var number in numbers)
+//     {
+//         return number;
+//     }
+//     throw new Exception("The collection cannot be empty.");
+// }
+
+// Console.ReadKey();
+
+// int GetFirstElement(IEnumerable<int> numbers)
+// {
+//     foreach(var number in numbers)
+//     {
+//         return number;
+//     }
+//     throw new InvalidOperationException("The collection cannot be empty.");
+// }
+
+
+// bool IsFirstElementPositive(IEnumerable<int> numbers)
+// {
+//     try
+//     {
+//         var firstElement = GetFirstElement(numbers);
+//         return firstElement > 0;
+//     }
+//     catch(InvalidOperationException Ex)
+//     {
+//         Console.WriteLine("The collection is empty.");
+//         return true;
+//     }
+//     catch(NullReferenceException ex)
+//     {
+//         throw new ArgumentException("The collection is null.", ex);
+//     }
+// }
+
+
+using System.Runtime.Serialization;
+
+throw new Exception();
 
 Console.ReadKey();
+[Serializable]
 
-int  GetFirstElement(IEnumerable<int> numbers)
+public class CustomException : Exception
 {
-    foreach(var number in numbers)
+    public int StatusCode { get; }
+
+    protected CustomException(SerilizationInfo info, StreamingContext) : base(info, context)
     {
-        return number;
+        
     }
-    throw new Exception("The collection cannot be empty.");
+    public CustomException(){
+        
+    }
+
+    public CustomException(string message, int statusCode) : base(message)
+    {
+        StatusCode = statusCode;
+    }
+    
+    public CustomException(string message, int statusCode, Exception innerException) : base(message, innerException)
+    {
+        StatusCode = statusCode;
+    }
+
+    public CustomException(string massage) : base(message)
+    {
+        
+    }
+    public CustomException(string message, Exception innerException) : base(message, innerException)
+    {
+        
+    }
 }
